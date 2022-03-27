@@ -1,0 +1,64 @@
+
+<mat-card>
+  <button mat-icon-button (click)="goBack()">
+    <mat-icon>
+      keyboard_backspace
+    </mat-icon>
+  </button>
+  <mat-grid-list cols="2" rowHeight="300px">
+
+    <mat-grid-tile colspan="1" rowspan="1">
+      <img mat-card-xl-image matListAvatar src ='assets/img/official-artwork/{{detail?.id}}.png'>
+    </mat-grid-tile>
+
+    <mat-grid-list cols="2" rowHeight="60px">
+
+      <mat-grid-tile colspan="2" rowspan="1">
+        <p>{{detail?.name}}</p>
+        <button mat-icon-button (click)="audio.play()">
+          <mat-icon>
+            play_circle_outline
+          </mat-icon>
+        </button>
+
+          <audio  #audio autoplay src='assets/audio/{{detail?.id}}.mp3'></audio>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="2" rowspan="1">
+        <mat-chip-list >
+          <mat-chip *ngFor="let type of detail?.types" >{{type}}</mat-chip>
+       </mat-chip-list>
+
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="1">
+        <p>Taille : {{detail?.height| number: '1.1'}} m</p>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="2" rowspan="1">
+        <p>Poids : {{detail?.weight | number: '1.1'}} kg</p>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="1" rowspan="1">
+        <p>No. {{detail?.id | number: '3.0'}}</p>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+
+    <mat-grid-tile colspan="2" rowspan="1">
+      <p>{{detail?.description}}</p>
+    </mat-grid-tile>
+
+
+
+
+  </mat-grid-list>
+
+</mat-card>
+
+
+
+
+
+
+

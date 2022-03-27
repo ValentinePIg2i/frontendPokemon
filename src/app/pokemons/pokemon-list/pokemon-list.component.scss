@@ -1,0 +1,23 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.button-team {
+  background-color:  darkgoldenrod;
+}
+
+*::-webkit-scrollbar {
+  background: gray;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 20px;
+}

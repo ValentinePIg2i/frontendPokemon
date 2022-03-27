@@ -1,0 +1,52 @@
+.nav-list{
+  overflow-y: scroll;
+  max-height: 420px;
+  max-width: 50vw !important;
+
+}
+
+h3{
+  background-color: darkgray;
+  color: white;
+  size: 20px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.msg-error{
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  opacity: 80%;
+  border-radius: 8px;
+  text-align:center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.card-pokemon{
+  display: flex;
+  justify-content: space-around;
+
+}
+.list-pokemon{
+  align-content: center;
+  border: solid 2px grey;
+  border-radius: 8px;
+}
+
+.icon-center{
+  margin-top: 20vh;
+}
+
+*::-webkit-scrollbar {
+  background: gray;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 20px;
+}

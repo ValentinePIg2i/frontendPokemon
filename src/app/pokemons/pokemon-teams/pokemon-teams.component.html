@@ -1,0 +1,52 @@
+<button mat-icon-button (click)="goBack()">
+  <mat-icon>
+    keyboard_backspace
+  </mat-icon>
+</button>
+
+<div *ngIf="message" class="msg-error">
+  <mat-icon>warning</mat-icon>
+  <p style="margin: 0px;"> {{message}}</p>
+  <mat-icon>warning</mat-icon>
+</div>
+
+<div class="card-pokemon">
+  <div class="list-pokemon" style="width: 267px;">
+    <h3>Team</h3>
+    <mat-nav-list *ngFor="let pokemon of maTeam">
+      <mat-list-item (click)="suppPokemon(pokemon)">
+        <img matListAvatar src ='assets/img/sprites/{{pokemon.id}}.png'>
+        <p matLine >{{pokemon.id}}.{{pokemon.name}}</p>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
+
+  <div>
+    <button mat-icon-button class="icon-center">
+      <mat-icon>compare_arrows</mat-icon>
+    </button>
+  </div>
+
+  <div class="list-pokemon" style="width: 267px;">
+    <h3>Pokedex</h3>
+    <mat-nav-list [scrollWindow]="false" infiniteScroll (scrolled)="onScroll()" class="nav-list">
+      <ul *ngFor="let pokemon of listPokemons?.data">
+        <mat-list-item (click)="addPokemon(pokemon)">
+        <img matListAvatar src ='assets/img/sprites/{{pokemon.id}}.png'>
+        <p matLine > {{pokemon.id}}.{{pokemon.name}}</p>
+        </mat-list-item>
+      </ul>
+    </mat-nav-list>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

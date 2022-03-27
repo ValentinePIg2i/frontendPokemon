@@ -1,0 +1,24 @@
+
+  <mat-card class="card-field">
+      <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search Pokemon</mat-label>
+    <input matInput placeholder="Ex. Pikachu" [ngModel]="search" (ngModelChange)="getPokemonSearch($event)">
+  </mat-form-field>
+
+
+    <button mat-button (click)="getTeam()" class="button-team">Ma Team</button>
+  </mat-card>
+
+
+
+
+
+<mat-nav-list [scrollWindow]="false" infiniteScroll (scrolled)="onScroll()" style="overflow: auto; height: calc(90vh - 68px);">
+  <a *ngFor="let pokemon of listPokemons?.data" [routerLink]="['/pokemon',pokemon.id]">
+  <mat-list-item (click)='selectPokemon(pokemon.id)' >
+    <img matListAvatar src ='assets/img/sprites/{{pokemon.id}}.png'>
+    <!-- <p matLine routerLink="pokemon/{{pokemon?.id}}" >{{pokemon.id}}.{{pokemon.name}}</p> -->
+    <p matLine > {{pokemon.id}}.{{pokemon.name}}</p>
+  </mat-list-item>
+</a>
+</mat-nav-list>

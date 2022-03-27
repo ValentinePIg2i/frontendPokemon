@@ -1,0 +1,44 @@
+.form-field {
+  width: 100%;
+}
+
+.card-field {
+  margin:auto;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+}
+
+.msg-error{
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  opacity: 80%;
+  border-radius: 8px;
+  text-align:center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.button-connexion {
+  background-color:  darkgoldenrod;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}

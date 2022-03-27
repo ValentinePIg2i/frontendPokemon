@@ -1,0 +1,23 @@
+<mat-card class="card-field">
+  <img mat-card-xl-image matListAvatar src ='assets/logo/pokemon.svg'>
+  <mat-form-field class="form-field" appearance="fill">
+    <mat-label>Identifiant</mat-label>
+    <input matInput [(ngModel)]="email" placeholder="Email" required>
+  </mat-form-field>
+  <mat-form-field class="form-field" appearance="fill">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput [(ngModel)]="password" [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+  </mat-form-field>
+  <div *ngIf="message" class="msg-error">
+    <mat-icon>warning</mat-icon>
+    <p style="margin: 0px;"> {{message}}</p>
+    <mat-icon>warning</mat-icon>
+  </div>
+  <button mat-button (click)="authentification()" class="button-connexion">Connexion</button>
+</mat-card>
+
+
+

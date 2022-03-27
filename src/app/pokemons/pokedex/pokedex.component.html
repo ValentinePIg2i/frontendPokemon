@@ -1,0 +1,12 @@
+
+<mat-sidenav-container autosize>
+  <mat-sidenav mode="side" opened>
+    <app-pokemon-list (newItemEvent)="onChange($event)" (team)="onClick()" ></app-pokemon-list>
+  </mat-sidenav>
+  <mat-sidenav-content #sidenav style="height: 100vh;">
+    <app-pokemon-detail *ngIf='idPokemon' [pokeId]="idPokemon" (retour)="onRetour()"><p>hello</p></app-pokemon-detail>
+    <app-pokemon-teams *ngIf='team && ! idPokemon' [teams]="team" (retour)="onRetour()"></app-pokemon-teams>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
